@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --default-shadow: rgba(0, 0, 0, .15) 0px 2px 8px;
+    --dark-blue: #0A3871;
+}
+
+* {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F3F5FC;
+}
+
+.encoding-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 99vh;
+}
+
+.encoding-section h1 {
+    margin-bottom: 32px;
+    color: var(--dark-blue);
+}
+
+.input-wrapper {
+    width: 60%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.input-wrapper + .input-wrapper {
+    margin-top: 32px;
+}
+
+.input-wrapper span {
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: pointer;
+    margin-left: 8px;
+    background-color: white;
+    border-radius: 4px;
+    padding: 6px;
+    box-shadow: var(--default-shadow);
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.input-wrapper span:hover {
+    background-color: #eee;
+}
+
+.input-wrapper span:active {
+    background-color: #ddd;
+}
+
+.both-directions-icon {
+    width: 56px;
+    margin: 12px 0;
+}
+
+textarea {
+    width: 80%;
+    font-weight: 300;
+    font-size: 1.35rem;
+    padding: 8px;
+    border-radius: 4px;
+    outline: 0;
+    border: 0;
+    min-height: 200px;
+    resize: none;
+    box-shadow: var(--default-shadow);
+    border: 2px solid transparent;
+    color: var(--dark-blue);
+}
+
+textarea:focus {
+    border: 2px solid var(--dark-blue);
+}
+
+
+.red-border {
+    border: 2px solid #ff5d62 !important;
+}
+
+.green-border {
+    border: 2px solid #98FB98 !important;
+}
+
+/* ========================= */
+
+@media (max-width: 1366px) {
+    .encoding-section h1 {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    textarea {
+        font-size: 1.15rem;
+    }
+
+    .input-wrapper {
+        width: 80%;
+    }
+}
+
+@media (max-width: 600px) {
+    .input-wrapper {
+        width: 100%;
+    }
+
+}
